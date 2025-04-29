@@ -14,16 +14,16 @@ int main()
     y = (float*)malloc(n * sizeof(float));
 
     printf("Enter the values of x and y:\n");
-    for (i = 0;i < n;i++)
-        scanf_s("%f %f", &x[i], &y[i]);
-
+        
     for (i = 0;i < n;i++)
     {
+        scanf_s("%f %f", &x[i], &y[i]);
         sumX += x[i];
         sumY += y[i];
         sumXY += x[i] * y[i];
         sumX2 += x[i] * x[i];
     }
+
     b = (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);
     a = (sumY - b * sumX) / n;
 
