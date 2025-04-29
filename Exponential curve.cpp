@@ -18,16 +18,11 @@ int main()
 
     printf("Enter the values of x and y:\n");
     for (i = 0;i < n;i++)
-        scanf_s("%f %f", &x[i][0], &x[i][1]);
-    
-    for(i = 0;i < n;i++)
-        x[i][1] = log(x[i][1]);
-
-    for (i = 0;i < n;i++)
     {
+        scanf_s("%f %f", &x[i][0], &x[i][1]);
         sumX += x[i][0];
-        sumY += x[i][1];
-        sumXY += x[i][0] * x[i][1];
+        sumY += log(x[i][1]);
+        sumXY += x[i][0] * log(x[i][1]);
         sumX2 += x[i][0] * x[i][0];
     }
     
